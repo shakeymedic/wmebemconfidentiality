@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidentiality in UK Emergency Medicine: An Infographic Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom styles for the infographic */
+        .infographic-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .infographic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        
+        /* Tooltip styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border-bottom: 2px dotted #4f46e5;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #374151;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: normal;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #374151 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <!-- Header -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Confidentiality in UK Emergency Medicine</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">A Quick Reference Guide for EM Doctors</p>
+        </header>
+
+        <!-- Core Principle Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 border-l-4 border-indigo-500">
+             <div class="flex items-center">
+                <svg class="icon text-indigo-500 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                </svg>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900">The Core Principle is Not Absolute</h2>
+                    <p class="text-gray-600 mt-1">Patient confidentiality is a cornerstone of medical practice, governed by common law and the <span class="tooltip">Data Protection Act 2018 / UK GDPR<span class="tooltiptext">These laws provide statutory protection for 'special category data' like health information, requiring a lawful basis for processing.</span></span>. However, it can be lawfully and ethically breached in specific situations.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Grid for Infographic -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+            <!-- WHEN YOU MUST BREAK CONFIDENTIALITY -->
+            <div class="infographic-card bg-red-50 border-red-500 border-2 rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="icon text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                    <h3 class="ml-3 text-2xl font-bold text-red-800">When You MUST Disclose</h3>
+                </div>
+                <p class="text-red-700 mb-4 font-semibold">Disclosure is a legal duty, with or without patient consent, in these cases:</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19 14.5M12 14.5v-5.714c0-.597-.237-1.17-.659-1.591L7 3.104M12 14.5L9.75 16.75h4.5L12 14.5z" /></svg>
+                        <span><strong class="font-semibold text-gray-900">Notifiable Diseases:</strong> Statutory duty to inform the UK Health Security Agency (e.g., COVID-19, TB, Meningitis).</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 003.375-3.375h1.5a1.125 1.125 0 011.125 1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375m17.25 0v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125 1.125v-1.5c0-.621.504-1.125 1.125-1.125h1.125m-6-3.375a3.375 3.375 0 00-3.375-3.375H9.375a3.375 3.375 0 00-3.375 3.375v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 003.375-3.375v-1.5Z" /></svg>
+                        <span><strong class="font-semibold text-gray-900">Road Traffic Act 1988:</strong> Provide patient identity/address to police for traffic offences. Do not disclose clinical details without consent/court order.</span>
+                    </li>
+                    <li class="flex items-start">
+                         <svg class="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" /></svg>
+                        <span><strong class="font-semibold text-gray-900">Terrorism Act 2000:</strong> Inform police of information that may prevent an act of terrorism.</span>
+                    </li>
+                     <li class="flex items-start">
+                        <svg class="w-5 h-5 text-red-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6.375a.75.75 0 01.75.75v3.75a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v-3.75a.75.75 0 01.75-.75z" /></svg>
+                        <span><strong class="font-semibold text-gray-900">Court Orders:</strong> Must be complied with exactly. Failure can lead to contempt of court.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- WHEN YOU MAY BREAK CONFIDENTIALITY -->
+            <div class="infographic-card bg-amber-50 border-amber-500 border-2 rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="icon text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <h3 class="ml-3 text-2xl font-bold text-amber-800">When You MAY Disclose</h3>
+                </div>
+                 <p class="text-amber-700 mb-4 font-semibold">Disclosure without consent may be justified if it's in the <span class="tooltip">public interest<span class="tooltiptext">A complex ethical concept where the benefits to the public are judged to outweigh the harm of breaching confidentiality.</span></span>.</p>
+                
+                <div class="bg-white rounded-lg p-4 mt-4 border border-gray-200">
+                    <h4 class="font-bold text-gray-800 text-center">The Public Interest Balancing Test</h4>
+                    <p class="text-sm text-center text-gray-500 mb-3">Weigh the potential harm of disclosure vs. non-disclosure.</p>
+                    <div class="flex items-center justify-center space-x-4">
+                        <div class="text-center">
+                            <p class="font-semibold">Harm to Patient & Trust</p>
+                        </div>
+                        <svg class="w-12 h-12 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691v4.992h-4.992m0 0l-3.181-3.183a8.25 8.25 0 0111.667 0l3.181 3.183" /></svg>
+                        <div class="text-center">
+                            <p class="font-semibold">Harm to Others & Public</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4 font-semibold text-gray-800">Justified to prevent:</p>
+                <ul class="mt-2 space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-amber-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>Serious crime or serious threat to public health.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-amber-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>Serious harm to the patient or others.</span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- SAFEGUARDING -->
+            <div class="infographic-card bg-blue-50 border-blue-500 border-2 rounded-lg shadow-md p-6 md:col-span-2">
+                 <div class="flex items-center mb-4">
+                    <svg class="icon text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                    </svg>
+                    <h3 class="ml-3 text-2xl font-bold text-blue-800">Safeguarding is Paramount</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-bold text-lg text-blue-900">Child Protection</h4>
+                        <p class="text-blue-700">The safety of the child overrides confidentiality.</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+                            <li>Promptly inform children's services, NSPCC or police.</li>
+                            <li>Share all relevant information.</li>
+                            <li>Seek consent only if it does NOT increase risk to the child.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-lg text-blue-900">Vulnerable Adults</h4>
+                        <p class="text-blue-700">Balance autonomy with duty of care.</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+                            <li>Competent adults can refuse disclosure, even if at risk.</li>
+                            <li>Disclosure may be justified to prevent serious harm to OTHERS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KEY FRAMEWORKS -->
+            <div class="infographic-card bg-green-50 border-green-500 border-2 rounded-lg shadow-md p-6">
+                 <div class="flex items-center mb-4">
+                    <svg class="icon text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                    <h3 class="ml-3 text-2xl font-bold text-green-800">Key Frameworks</h3>
+                </div>
+                <ul class="space-y-3">
+                    <li><strong class="font-semibold text-gray-900">GMC Guidance:</strong> The definitive professional standard. "Confidentiality: good practice" is essential reading.</li>
+                    <li>
+                        <strong class="font-semibold text-gray-900 tooltip">Caldicott Principles <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="tooltiptext">Eight principles governing the use of patient information in the NHS, including 'justify the purpose' and 'use minimum necessary'.</span>
+                        </strong>: Governs information use within the NHS. Principle 7: duty to share for care is as vital as the duty to protect.
+                    </li>
+                     <li><strong class="font-semibold text-gray-900">Mental Health Act 1983:</strong> Specific obligations for information sharing for detained patients.</li>
+                </ul>
+            </div>
+            
+            <!-- DOCUMENTATION -->
+            <div class="infographic-card bg-gray-100 border-gray-400 border-2 rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                     <svg class="icon text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                    </svg>
+                    <h3 class="ml-3 text-2xl font-bold text-gray-800">Documentation is Key</h3>
+                </div>
+                <p class="text-gray-600 mb-4">If you break confidentiality, you must be able to justify your decision. Always record:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>What information was disclosed.</li>
+                    <li>To whom it was disclosed.</li>
+                    <li>The date and time of disclosure.</li>
+                    <li>Your detailed rationale for the decision.</li>
+                    <li>Any objections from the patient.</li>
+                    <li>Advice sought from senior colleagues or MDOs.</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <!-- Further Resources Section -->
+        <div class="infographic-card bg-white rounded-lg shadow-lg p-6 mt-8 md:mt-12 border-l-4 border-purple-500">
+             <div class="flex items-center mb-4">
+                <svg class="icon text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                </svg>
+                <h3 class="ml-3 text-2xl font-bold text-purple-800">Further Resources</h3>
+            </div>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                    <a href="https://www.gmc-uk.org/professional-standards/the-professional-standards/confidentiality" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline"><strong class="font-semibold">GMC:</strong> Confidentiality: good practice in handling patient information</a>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                    <a href="https://www.gov.uk/guidance/assessing-fitness-to-drive-a-guide-for-medical-professionals" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline"><strong class="font-semibold">DVLA:</strong> Assessing fitness to drive: a guide for medical professionals</a>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                    <a href="https://rcem.ac.uk/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline"><strong class="font-semibold">RCEM:</strong> Royal College of Emergency Medicine Homepage</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Final Advice Section -->
+        <div class="bg-indigo-700 text-white rounded-lg shadow-lg p-6 mt-8 md:mt-12 text-center">
+            <h2 class="text-2xl font-bold">When in Doubt, Seek Advice!</h2>
+            <p class="mt-2 opacity-90">If you are unsure whether to disclose information, pause and consult. Your decision should be defensible, not made alone.</p>
+            <div class="flex flex-wrap justify-center gap-4 mt-4 text-sm">
+                <span class="bg-indigo-500 rounded-full px-3 py-1">Senior Colleagues</span>
+                <span class="bg-indigo-500 rounded-full px-3 py-1">Caldicott Guardian</span>
+                <span class="bg-indigo-500 rounded-full px-3 py-1">Medical Defence Organisation</span>
+                 <span class="bg-indigo-500 rounded-full px-3 py-1">GMC Guidance</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // No complex JS needed for this version, but this is where interactivity could be added.
+        // For example, handling clicks for more complex pop-ups or analytics.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Infographic loaded.');
+        });
+    </script>
+
+</body>
+</html>
+
