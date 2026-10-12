@@ -1,7 +1,13 @@
-# Backup of https://wmebemconfidentiality.netlify.app
+# Confidentiality in the ED: can I share this?
 
-This repository was empty because the site was deployed to Netlify by drag-and-drop, so the live deploy was the only copy.
+Live site: https://wmebemconfidentiality.netlify.app
 
-These files were downloaded from the live site on 6 October 2026 as a backup. They are the files the browser receives, so anything that only ran on Netlify's servers (for example Netlify Functions or environment variables) is not included.
+- `index.html` is the whole tool (plain HTML, CSS and a few lines of JavaScript, no build step).
+- `confidentiality-poster-a3.pdf` is the A3 poster, linked from the tool.
+- `poster/index.html` is the poster source. Open it in Chrome and print at A3, margins None, background graphics on, or render it to PDF with Playwright.
 
-Pushing to this repository does **not** deploy the site, because the Netlify project is not linked to GitHub.
+**Deploying:** this repository is not linked to Netlify. The site is deployed by uploading the folder (index.html and the PDF) to the Netlify project `wmebemconfidentiality`. Pushing here does not deploy.
+
+**Content:** written for England, checked against GMC *Confidentiality* (2017, updated 2024), Children Act 2004 s16LA (in force 30 September 2026) and the other sources listed at the bottom of the page. Last reviewed 12 October 2026; review the tool by October 2028 and the poster by October 2027.
+
+Before 12 October 2026 this repository only held a backup of the earlier drag-and-drop version (downloaded 6 October 2026); that version is in this branch's history.
