@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidentiality: A3 poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --blue:#005eb8; --dark-blue:#003087; --text:#212b32; --muted:#4c6272; --line:#d8dde0; --must:#b3261e; --must-bg:#fde8e6; --may:#8a5300; --may-bg:#fff4d6; --ok:#007f3b; --ok-bg:#e2f3e9; --new:#6b2c91; --new-bg:#f3e9f8; }
+* { box-sizing:border-box; -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+html,body { margin:0; padding:0; }
+body { font-family:'Inter',Arial,sans-serif; color:var(--text); background:#555; }
+.poster { width:297mm; height:420mm; margin:0 auto; background:#fff; padding:10mm 15mm 7mm; display:flex; flex-direction:column; gap:4mm; overflow:hidden; }
+header { display:flex; align-items:flex-end; gap:8mm; border-bottom:2mm solid var(--blue); padding-bottom:4mm; }
+header h1 { flex:1; margin:0; font-size:46pt; line-height:1.02; color:var(--dark-blue); font-weight:800; letter-spacing:-0.5pt; }
+header h1 span { display:block; font-size:27pt; color:var(--blue); font-weight:800; letter-spacing:0; margin-top:1.5mm; }
+.org { flex:none; text-align:right; font-size:12pt; font-weight:700; color:var(--dark-blue); line-height:1.25; padding-bottom:1mm; }
+h2.sec { margin:0 0 2mm; font-size:19pt; color:var(--dark-blue); line-height:1.1; }
+.four { display:grid; grid-template-columns:repeat(4,1fr); gap:3.5mm; }
+.four div { background:#e3eef9; border-radius:2.5mm; padding:3.5mm 4mm; }
+.four b { display:flex; align-items:center; gap:2.5mm; font-size:15.5pt; color:var(--dark-blue); line-height:1.12; margin-bottom:1.5mm; }
+.four b i { font-style:normal; flex:none; width:10mm; height:10mm; border-radius:50%; background:var(--blue); color:#fff; display:flex; align-items:center; justify-content:center; font-size:15pt; }
+.four p { margin:0; font-size:11.5pt; line-height:1.3; color:var(--text); }
+.none { margin:2.5mm 0 0; background:#eef1f3; border-radius:2mm; padding:2.5mm 4mm; font-size:13pt; font-weight:700; color:var(--text); }
+.must { border:1mm solid var(--must); border-radius:3mm; padding:4mm 5mm; background:var(--must-bg); }
+.must h2 { color:var(--must); }
+.must ul { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:2mm 6mm; }
+.must li { font-size:13pt; line-height:1.28; padding-left:6mm; position:relative; }
+.must li::before { content:""; position:absolute; left:0; top:2.2mm; width:2.8mm; height:2.8mm; background:var(--must); border-radius:50%; }
+.must li.new { grid-column:1 / -1; background:var(--new-bg); border-left:2mm solid var(--new); border-radius:1.5mm; padding:2mm 3mm 2mm 4mm; }
+.must li.new::before { display:none; }
+.must li.new b.flag { color:var(--new); }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:3.5mm; }
+.tile { border-radius:2.5mm; padding:2.8mm 4.5mm; background:#f0f4f5; border-left:2.5mm solid var(--blue); }
+.tile.may { border-left-color:var(--may); background:var(--may-bg); }
+.tile.child { border-left-color:var(--new); background:var(--new-bg); }
+.tile h3 { margin:0 0 1.2mm; font-size:15pt; line-height:1.15; color:var(--dark-blue); }
+.tile p { margin:0; font-size:11.8pt; line-height:1.3; }
+.bottom { display:grid; grid-template-columns:1.15fr 1fr; gap:4mm; }
+.how { background:var(--ok-bg); border-radius:3mm; padding:4mm 5mm; border-top:1.5mm solid var(--ok); }
+.how h2 { color:var(--ok); }
+.how ol { margin:0; padding-left:6mm; font-size:12.5pt; line-height:1.32; }
+.how li { margin:0 0 1.2mm; }
+.ask { background:var(--dark-blue); color:#fff; border-radius:3mm; padding:4mm 5mm; display:flex; flex-direction:column; gap:2.5mm; }
+.ask h2 { color:#fff; margin:0; }
+.ask p { margin:0; font-size:12pt; line-height:1.3; }
+.ask ul { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:1.8mm; }
+.ask li { background:rgba(255,255,255,.16); border-radius:10mm; padding:1.2mm 3.5mm; font-size:11.5pt; font-weight:700; }
+.qrband { display:flex; align-items:center; gap:6mm; border:0.6mm solid var(--line); border-radius:3mm; padding:2.5mm 5mm; }
+.qrband svg { width:30mm; height:30mm; flex:none; }
+.qrband h2 { margin:0 0 1mm; font-size:19pt; color:var(--dark-blue); }
+.qrband p { margin:0; font-size:12pt; line-height:1.3; color:var(--muted); }
+.qrband .url { font-weight:700; color:var(--blue); }
+footer { margin-top:auto; display:flex; align-items:flex-end; gap:6mm; font-size:8.6pt; color:var(--muted); line-height:1.32; }
+footer div:first-child { flex:1; }
+footer .review { background:#fff4d6; border:0.5mm solid #c98a00; color:#5c3a00; border-radius:2mm; padding:1.5mm 3mm; font-weight:700; font-size:11pt; white-space:nowrap; }
+@media screen { body { padding:20px 0; } .poster { box-shadow:0 0 40px rgba(0,0,0,.5); } }
+@media print { @page { size:A3 portrait; margin:0; } body { background:#fff; } }
+</style>
+</head>
+<body>
+<div class="poster">
+
+<header>
+  <h1>Confidentiality<span>Can I share this?</span></h1>
+  <div class="org">Emergency Department<br>University Hospitals<br>Birmingham</div>
+</header>
+
+<section>
+  <h2 class="sec">You may share if ONE of these applies</h2>
+  <div class="four">
+    <div><b><i>1</i>Consent</b><p>Implied for the team caring for the patient. Ask explicitly for anyone else: police, solicitors, employers.</p></div>
+    <div><b><i>2</i>Lacks capacity</b><p>Share what is in their best interests, for example telling family how they are.</p></div>
+    <div><b><i>3</i>Required by law</b><p>See the red box below. Share only what the law asks for.</p></div>
+    <div><b><i>4</i>Public interest</b><p>To protect others from death or serious harm, or to prevent or detect serious crime. Ask a senior.</p></div>
+  </div>
+  <p class="none">None of these? Do not share.</p>
+</section>
+
+<section class="must">
+  <h2 class="sec">You must share: the law says so</h2>
+  <ul>
+    <li class="new"><b class="flag">New from 30 Sept 2026:</b> information relevant to a <b>child's</b> safety or welfare must be shared with social care or police through the safeguarding team. Consent is not needed. <span style="white-space:nowrap">(Children Act 2004, s16LA)</span></li>
+    <li><b>FGM in a girl under 18</b> (she tells you or you see it): <b>you</b> call the police on 101</li>
+    <li><b>Notifiable disease:</b> tell UKHSA on suspicion. Urgent ones by phone within 24 hours</li>
+    <li><b>Terrorism:</b> tell the police anything that may help prevent it</li>
+    <li><b>Police identifying a driver:</b> give identity only, no clinical details</li>
+    <li><b>Court order or coroner:</b> share only what is required</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="sec">Common situations</h2>
+  <div class="grid">
+    <div class="tile may"><h3>Gunshot or knife assault</h3><p>Usually tell the police quickly, without the patient's name at first. Giving their identity needs consent or a public interest reason. Not usually needed for accidental or self-inflicted knife wounds.</p></div>
+    <div class="tile"><h3>Police ask about a patient</h3><p>No general duty to answer. You need consent, a legal requirement, a court order or a public interest reason. Involve the consultant in charge.</p></div>
+    <div class="tile"><h3>Relative on the phone</h3><p>Do not confirm the patient is here without their consent. You can always listen to relatives' concerns.</p></div>
+    <div class="tile child"><h3>Worried about a child</h3><p>Share through the safeguarding team. Usually tell the family, unless that puts the child at risk. Think about children at home of adult patients too.</p></div>
+    <div class="tile may"><h3>Adult discloses domestic abuse</h3><p>If they have capacity and refuse a referral, usually respect it. Share if others, such as children, are at risk of serious harm.</p></div>
+    <div class="tile may"><h3>Unfit to drive, won't stop</h3><p>The patient must tell DVLA. If they keep driving, you may tell DVLA without consent. Tell them first unless unsafe.</p></div>
+  </div>
+</section>
+
+<section class="bottom">
+  <div class="how">
+    <h2 class="sec">If you share</h2>
+    <ol>
+      <li>Share the <b>minimum</b> needed</li>
+      <li>Check who you are talking to</li>
+      <li><b>Tell the patient</b>, unless unsafe or it would defeat the purpose</li>
+      <li><b>Document:</b> what, to whom, when, the legal basis and why</li>
+    </ol>
+  </div>
+  <div class="ask">
+    <h2 class="sec">Not sure? Ask first</h2>
+    <p>You must be able to justify your decision. You do not have to make it alone.</p>
+    <ul>
+      <li>Consultant in charge</li>
+      <li>Safeguarding team</li>
+      <li>Caldicott Guardian</li>
+      <li>Defence organisation</li>
+    </ul>
+  </div>
+</section>
+
+<section class="qrband">
+  <svg role="img" aria-label="QR code: wmebemconfidentiality.netlify.app" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41"><path stroke="#000" d="M2 2.5h7m1 0h2m2 0h1m1 0h5m2 0h1m1 0h3m2 0h1m1 0h7m-37 1h1m5 0h1m1 0h2m1 0h2m1 0h1m3 0h2m1 0h1m2 0h1m2 0h1m2 0h1m5 0h1m-37 1h1m1 0h3m1 0h1m1 0h6m1 0h7m1 0h1m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m1 0h3m2 0h4m1 0h1m2 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m4 0h4m3 0h1m2 0h1m8 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h3m1 0h2m2 0h2m1 0h1m5 0h1m-37 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-29 1h3m1 0h1m2 0h2m1 0h4m1 0h2m3 0h1m-27 1h3m1 0h1m1 0h1m1 0h2m4 0h1m2 0h1m1 0h1m1 0h2m3 0h4m2 0h3m-30 1h7m3 0h1m3 0h1m1 0h1m1 0h1m2 0h1m5 0h2m-35 1h2m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m1 0h1m6 0h4m2 0h2m1 0h1m1 0h2m-37 1h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m4 0h2m5 0h1m1 0h2m2 0h1m1 0h1m-30 1h1m2 0h1m1 0h2m2 0h2m1 0h3m2 0h11m1 0h4m-33 1h2m5 0h1m2 0h3m2 0h3m2 0h1m1 0h2m1 0h2m1 0h1m1 0h2m-35 1h2m2 0h1m1 0h1m1 0h1m4 0h1m1 0h7m2 0h1m2 0h1m2 0h2m1 0h1m1 0h2m-36 1h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m1 0h6m1 0h1m2 0h4m5 0h2m-37 1h3m3 0h2m2 0h2m1 0h3m2 0h2m1 0h1m2 0h4m1 0h2m1 0h1m1 0h3m-37 1h2m1 0h1m4 0h2m1 0h2m2 0h2m3 0h2m2 0h2m2 0h1m2 0h1m1 0h1m-33 1h1m2 0h1m1 0h3m2 0h1m1 0h7m3 0h1m1 0h3m1 0h1m1 0h1m1 0h4m-37 1h2m1 0h3m1 0h2m1 0h1m1 0h1m2 0h3m2 0h1m1 0h1m5 0h1m1 0h3m2 0h2m-37 1h4m1 0h3m1 0h2m6 0h1m3 0h1m1 0h1m1 0h2m2 0h6m-35 1h1m1 0h1m1 0h1m5 0h1m1 0h3m1 0h1m14 0h1m-32 1h5m1 0h4m5 0h2m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m3 0h1m1 0h2m-37 1h3m2 0h1m2 0h1m1 0h1m3 0h2m1 0h4m1 0h2m7 0h1m4 0h1m-32 1h3m1 0h1m1 0h2m1 0h3m5 0h2m4 0h9m-37 1h3m6 0h2m1 0h1m1 0h2m1 0h3m1 0h2m1 0h1m3 0h1m2 0h1m1 0h2m-35 1h1m1 0h2m2 0h1m1 0h2m1 0h1m2 0h1m2 0h2m1 0h1m4 0h4m1 0h1m1 0h1m2 0h2m-37 1h1m1 0h4m3 0h3m3 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m3 0h2m-37 1h1m2 0h1m1 0h3m3 0h1m1 0h5m1 0h2m1 0h1m2 0h12m-29 1h2m3 0h7m2 0h2m4 0h1m3 0h1m-33 1h7m3 0h1m3 0h2m1 0h1m1 0h1m6 0h1m1 0h1m1 0h1m1 0h2m1 0h2m-37 1h1m5 0h1m5 0h4m1 0h1m2 0h1m7 0h1m3 0h1m2 0h2m-37 1h1m1 0h3m1 0h1m1 0h6m2 0h1m1 0h4m2 0h9m1 0h2m-36 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m4 0h1m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m3 0h1m3 0h2m2 0h1m2 0h7m1 0h1m4 0h1m-37 1h1m5 0h1m2 0h3m2 0h3m2 0h3m1 0h1m3 0h3m1 0h1m4 0h1m-37 1h7m2 0h1m5 0h1m3 0h1m3 0h4m2 0h1m2 0h5"/></svg>
+
+  <div>
+    <h2>Scan for the full guide and sources</h2>
+    <p>17 common ED situations, what the law and GMC say about each, and how to share safely.</p>
+    <p class="url">wmebemconfidentiality.netlify.app</p>
+  </div>
+</section>
+
+<footer>
+  <div>Based on GMC <i>Confidentiality: good practice in handling patient information</i> (2017, updated 2024) and its guidance on gunshot and knife wounds and on DVLA; Children Act 2004 s16LA and DfE statutory guidance (2026); FGM Act 2003 s5B; Health Protection (Notification) Regulations 2010; Terrorism Act 2000 s38B; Road Traffic Act 1988 s172. Written for England. A summary, not legal advice: follow Trust policy. Developed by Dr Jake Turner.</div>
+  <div class="review">Review by: October 2027</div>
+</footer>
+
+</div>
+</body>
+</html>
